@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <title>Document</title>
+    <script src="student.js" defer></script>
+    <script>
+        function warden() {
+            var i, p, j, flag = 0;
+            i = document.getElementById("t1").value;
+            p = document.getElementById("p1").value;
+            if (i.length == 0 || p.length == 0)
+                document.getElementById("sp1").innerHTML = "<font color='red'>Please Enter Valid Credentials</font>"
+            else {
+                for (j = 0; j < i.length; j++){
+                    if ((i[j] >= 'a' && i[j] <= 'z') || (i[j] >= 0 && i[j] <= 9))
+                        continue;
+                    else {
+                        flag = 1; break;
+                    }
+                }
+                if (flag == 1)
+                    document.getElementById("sp1").innerHTML = "<font color='red'>Please Enter Valid ID!!</font>";
+                else {
+                    for (j = 0; j < p.length; j++) {
+                        if ((p[j] >= 'a' && p[j] <= 'z') || (p[j] >= 0 && p[j] <= 9))
+                            continue;
+                        else {
+                            flag = 1; break;
+                        }
+                    }
+                    if (flag == 1)
+                        document.getElementById("sp1").innerHTML = "<font color='red'>Please Enter Valid Password!!</font>";
+                    else
+                        document.location = "warden.html";
+                }
+            }
+        }
+        function student() {
+            var i, p, j, flag = 0;
+            i = document.getElementById("t2").value;
+            p = document.getElementById("p2").value;
+            if (i.length == 0 || p.length == 0)
+                document.getElementById("sp2").innerHTML = "<font color='red'>Please Enter Valid Credentials</font>"
+            else {
+                for (j = 0; j < i.length; j++) {
+                    if ((i[j] >= 'a' && i[j] <= 'z') || (i[j] >= 0 && i[j] <= 9))
+                        continue;
+                    else {
+                        flag = 1; break;
+                    }
+                }
+                if (flag == 1)
+                    document.getElementById("sp2").innerHTML = "<font color='red'>Please Enter Valid ID!!</font>";
+                else {
+                    for (j = 0; j < p.length; j++) {
+                        if ((p[j] >= 'a' && p[j] <= 'z') || (p[j] >= 0 && p[j] <= 9))
+                            continue;
+                        else {
+                            flag = 1; break;
+                        }
+                    }
+                    if (flag == 1)
+                        document.getElementById("sp2").innerHTML = "<font color='red'>Please Enter Valid Password!!</font>";
+                    else
+                        document.location = "student.html";
+                }
+            }
+        }
+
+    </script>
+<body>
+    <section id="header">
+        <a href=""><img src="https://www.pngkey.com/png/detail/244-2445261_shri-vishnu-engineering-college-for-women-vishnu-educational.png" height="100" width="150" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="HomePage.html">Home</a></li>
+                <li><a href="#">Warden</a></li>
+                <li><a href="#">Student</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="hero">
+        <h4 style="color: white;">Welcome to</h4>
+        <h2 style="color: white;">Shri Vishnu Engineering </h2>
+        <h1>College for Women</h1>
+        <p style="color:white;size: 15;"><b>A perfect place to chase your dreams...</b></p>
+        <button>Start booking now!</button>
+    </section>
+    <section id="feature" class="section-p1">
+        <div class="fe-box"><br>
+            <img src="https://cdn.esquimaltmfrc.com/wp-content/uploads/2015/09/flat-faces-icons-circle-woman-7-300x300.png" height="100" width="100">
+            <p><b>Warden Login</b></p>
+            <form>
+                <input type="text" class="oval" placeholder="Warden ID"  id="t1"><br>
+                <input type="password" class="oval" placeholder="Password" id="p1" style="margin:10px"><br>
+                <span id="sp1"></span>
+                <input type="button" id="buttonstyle" onclick="warden()" value="LogIn"/>
+            </form>
+        </div>
+        <div class="fe-box"><br>
+            <img src="https://th.bing.com/th/id/OIP.tfIquLGhRkp1JbWfma7bYQHaHa?pid=ImgDet&rs=1" height="100" width="150">
+            <p><b>Student Login</b></p>
+            <form>
+                <input type="text" class="oval" placeholder="Student ID" id="t2"><br>
+                <input type="password" class="oval" placeholder="Password" id="p2" style="margin:10px"><br>
+                <span id="sp2"></span>
+                <input type="button" id="buttonstyle" onclick="student()" value="LogIn"/>
+            </form>
+        </div>
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Contact</h4><br>
+            <p><strong>Address:</strong>Vishnupur,Bhimavaram,West Godavari</p>
+            <p><strong>Phone:</strong>08816-238687,250864</p>
+            <p><strong>Hours:</strong>10:00 - 18:00, Mon - Sat</p>
+        </div>
+        <div class="col">
+            <h4>About</h4><br>
+            <a href="">About Us</a>
+            <a href="">Terms & Conditions</a>
+            <a href="">Contact Us</a>
+        </div>
+        <div class="copyright">
+            <p>All copyrights are reserved..</p>
+        </div>
+    </footer>
+</body>
+</html>

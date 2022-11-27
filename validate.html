@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            margin: 100px 300px 10px 300px;
+            border: 1px solid black;
+            padding: 4%;
+            box-shadow: 0 20px 20px #a3cfcb;
+        }
+        input {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid black;
+        }
+        button {
+            margin-top: 5%;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 15px 30px;
+            color: #000;
+            background-color: #088178;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: 0.02s ease;
+        }
+    </style>
+    <script>
+        function validate(){
+            let mail=document.getElementById("email").value;
+            let num=document.getElementById("number").value;
+            let htnum=document.getElementById("htnum").value;
+            var mailformat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var numformat=/^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
+            if(mail.match(mailformat) && num.match(numformat) && htnum.length > 9)
+                document.getElementById("error").innerHTML=`<p style="color:#088178 font-size:20px align:center">You'r room has been booked</p>`;
+            else
+                document.getElementById("error").innerHTML=`<p style="color:red font-size:18px align:center">We can't get you enter valid credentials</p>`;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="bg">
+        <div id="container">
+            <center>
+                <x style="color: #088178; font-size: 28px;">Book Now</x>
+            </center><br><br>
+            <strong>Name: </strong>
+            <input type="text" placeholder="Name(as per SSC)" style="margin-left:135px;"><br><br>
+            <strong>E-mail: </strong>
+            <input type="text" placeholder="E-mail" style="margin-left:130px;" id="email"><br><br>
+            <strong>Phone number</strong>
+            <input type="text" placeholder="Phone number" style="margin-left:80px;" id="number"><br><br>
+            <strong>EAPCET Hall-Ticket:</strong>
+            <input type="text" placeholder="Hall-Ticket number" style="margin-left:30px;" id="htnum"><br><br>
+            <center><button id="normal" onclick="validate()">Submit</button></center>
+            <br><span id="error"></span>
+        </div>
+    </div>
+</body>
+
+</html>

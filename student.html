@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="warden.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script>
+        function change(name){    
+           let b1=document.getElementById('1');
+           let b2=document.getElementById('2');
+           let b3=document.getElementById('3');
+           let b4=document.getElementById('4');
+           if(b1.checked &&  b2.checked && b3.checked && b4.checked){
+                document.getElementById(name).style.backgroundColor="Red";
+                document.getElementById("1").checked = false;
+                document.getElementById("2").checked = false;
+                document.getElementById("3").checked = false;
+                document.getElementById("4").checked = false;
+           }
+           else{
+                if(b1.checked ||  b2.checked || b3.checked || b4.checked ){
+                    document.getElementById(name).style.backgroundColor="grey";
+                    document.getElementById("1").checked = false;
+                    document.getElementById("2").checked = false;
+                    document.getElementById("3").checked = false;
+                    document.getElementById("4").checked = false;
+                }
+                else{
+                    document.getElementById(name).style.backgroundColor="#088178"
+                    document.getElementById("1").checked = false;
+                    document.getElementById("2").checked = false;
+                    document.getElementById("3").checked = false;
+                    document.getElementById("4").checked = false;
+                }             
+           }
+        }
+        function validation(){
+            let b1=document.getElementById("1");
+            let b2=document.getElementById("1");
+            let b3=document.getElementById("1");
+            let b4=document.getElementById("1");
+            if(b1.checked || b2.checked || b3.checked || b4.checked)
+                document.location="validate.html"
+            else
+                alert("please..select bed number");
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="header">
+        <a href=""><img src="https://www.pngkey.com/png/detail/244-2445261_shri-vishnu-engineering-college-for-women-vishnu-educational.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Warden</a></li>
+                <li><a class="active" href="student.html">Student</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="hero">
+        <h4>As Sweet as Home</h4>
+        <h2>24/7 Care</h2>
+        <h1>Nutritious Food</h1>
+    </section>
+    <marquee  id="marquee" bgcolor="#ccc" loop="-1" scrollamount="5" width="100%"><x style="color: red;">Red</x> indicates filled rooms</marquee>
+    <section id="name">
+        <div>
+            <img src="https://www.touristsecrets.com/wp-content/uploads/2020/08/bed-142517_1280.jpg" />
+            <div><button>Revathi</button><br><br<br><br>
+            <x class="span1">
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button1">1</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button2">2</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button3">3</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button4">4</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button5">5</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button6">6</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button7">7</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button8">8</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button9">9</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button10">10</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button11">11</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="button12">12</button>
+            </x></div>
+        </div>
+        </div>
+        <div>
+            <img src="https://assets2.unilodgers.com/uploads/property/Swanston-House-Belfast-Ensuite-5-Unilodgers.jpeg" />
+            <div><button>Spoorthi</button>
+                <x class="span1">
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu1">1</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu2">2</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu3">3</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu4">4</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu5">5</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu6">6</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu7">7</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu8">8</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu9">9</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu10">10</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu11">11</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="bu12">12</button>
+                </x>
+            </div>
+        </div>
+        <div>
+            <img src="https://live.staticflickr.com/2896/14716098144_b44142737f_b.jpg" />
+            <div><button>Bhuvana</button>
+                <x class="span1">
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but1">1</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but2">2</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but3">3</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but4">4</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but5">5</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but6">6</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but7">7</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but8">8</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but9">9</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but10">10</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but11">11</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="but12">12</button>                  
+                   
+                </x>
+            </div>
+        </div>
+        <div>
+            <img src="https://s-ec.bstatic.com/images/hotel/max1024x768/898/89841753.jpg" />
+            <div><button>Vaidehi</button>
+                <x class="span1">
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt1">1</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt2">2</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt3">3</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt4">4</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt5">5</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt6">6</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt7">7</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt8">8</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt9">9</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt10">10</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt11">11</button>
+                    <button data-target="#myModal" data-toggle="modal" onclick="change(id)" id="butt12">12</button>
+                </x>
+            </div>
+        </div>
+    </section>
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+          
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="align-content: center;"><strong>Room Layout</strong></h4>
+              </div>
+              <div class="modal-body">
+                <img src="https://i.pinimg.com/originals/bd/dc/01/bddc0113b014e67bfe3b74fa4d7265f1.jpg" style="height:80%;width:80%;"/><br>
+            <x style="padding-right: 100px;" >
+            <strong>Bed-Details</strong><br>
+             <input type="checkbox" id="1"/>Bed-1<br>
+             <input type="checkbox" id="2"/>Bed-2<br>
+             <input type="checkbox" id="3"/>Bed-3<br>
+             <input type="checkbox" id="4"/>Bed-4<br></x>         
+             <strong>Room-type</strong><br>
+             <input type="radio" id="b1"/>AC<br>
+             <input type="radio" id="b1"/>Non-Ac<br>
+             <strong>Fee-Details:</strong><br>
+             <x style="color:black ;">AC:1,00,000/-</x><br>
+             <x style="color:black ;">Non-AC:80,000/-</x>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="validation()">Submit</button>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <footer class="section-p1">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> Kovvada Road , Street 32, Bhimavaram</p>
+                <p><strong>Phone:</strong>+ 534 202 / 08816 250864</p>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="">About Us</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="">Contact Us</a>
+            </div>
+            <div class="copyright">
+                <p>All copyrights are reserved..</p>
+            </div>
+        </footer>
+        
+
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan' , sans-serif;
+}
+h1{
+    font-size: 50px;
+    line-height: 64px ;
+    color: black;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px ;
+    color: black;
+}
+h4{
+    font-size: 20px;
+    color: black;
+}
+h6{
+    font-weight:700 ;
+    font-size: 12px;
+}
+p{
+    font-size: 16px ;
+    color: cadetblue;
+    margin: 15px 0px 20px 0px;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0px;
+}
+body{
+    width: 100%;
+}
+/* Warden */
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 80px ;
+    background: #E3E6F6;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index:999;
+    position:sticky;
+    left:0;
+    top:0;
+}
+#navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    transition: 0.3s ease;
+}
+#navbar li a:hover{
+    color:#088178;
+}
+#navbar li a.active{
+    color: #088178;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background:#088178;
+    position: absolute;
+    bottom:-4px;
+    left:20px;
+}
+#dropdown .normal{
+    font-size:14px ;
+    font-weight:600 ;
+    padding: 15px 30px;
+    color: #000;
+    background-color:hsl(176, 88%, 27%) ;
+    border-radius:4px ;
+    cursor: pointer;
+    border:none ;
+    outline: none;
+    transition:0.02s ease;
+}
+#page-header-img{
+    background-image: url("https://images.wisegeek.com/hostel-room-with-four-bunk-beds.jpg");
+    background-size: cover;
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+#header img{
+    height: 100px;
+    width: 150px;
+}
+#dropdown div{
+    padding-top: 30px;
+}
+#dropdown .ddd{
+    width:150px;
+    height: 50px;
+}
+#dropdown table th{
+    background-color:#088178;
+}
+/* Student */
+#hero{
+
+    background-image: url("https://slads.lk/wp-content/uploads/2019/02/37897907_1480571675377122_4026260943527739392_o.jpg");
+
+    background-size: cover;
+
+    height: 80vh;
+
+    width: 100%;
+
+    background-position: top 25% right 0;
+
+    padding: 0 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+}
+#marquee{
+    margin-top: 4%;
+    align-content: center;
+}
+#name{
+    margin-top:4%;
+}
+#name div{
+    margin-top: 4%;
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-between ;
+    flex-direction: row;
+}
+#name button{
+   margin-top: 5%;
+   font-size:14px ;
+
+    font-weight:600 ;
+
+    padding: 15px 30px;
+
+    color:#000;
+
+    background-color:#088178 ;
+
+    border-radius:4px ;
+
+    cursor: pointer;
+
+    border:none ;
+
+    outline: none;
+
+    transition:0.02s ease;
+}
+#name div button a{
+    text-decoration: none;
+    color:white ;
+}
+#name img{    
+     height: 400px;
+    width: 500px;
+    margin: 5% 5% 0% 5% ;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+}
+#hero h1{
+    color: #088178;
+}
+#name .span1{
+    margin-top: 10%;
+    margin-left: 0;
+    float: left;
+}
+#name div x{
+    margin-left: 0;
+}
+#name .span1 button{ 
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#name .span1 button i{
+    font-size: 16px;
+    font-weight: 600;
+}
+footer{
+    display:flex ;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .col{
+    display:flex ;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+footer .logo{
+    margin-bottom: 30px;
+}
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+footer a{
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #222;
+}
+footer .follow{
+    margin-top:20px;
+}
+footer .follow i{
+    color:#465b52 ;
+    padding-right:4px ;
+    cursor: pointer;
+}
+footer .install .row img{
+    border-radius: 6px;
+    border: 1px solid #088178;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+footer .install i:hover,
+footer a:hover{
+    color: #088178;
+}
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+#page-header{
+    background-image: url("https://th.bing.com/th/id/OIP.m5KcExAdTJ9yG5qfsIdZOAHaCa?pid=ImgDet&rs=1");
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+#page-header h2,
+#page-header p{
+    color: rgb(18, 15, 15);
+}
+#contact-details{
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+}
+#contact-details .details{
+    width: 40%;
+}
+#contact-details .details span,
+#contact-details form span{
+    font-size: 12px;
+
+}
+#contact-details .details h2
+#contact-details form h2{
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+#contact-details .details h3
+{
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+#contact-details .details li{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+#contact-details .details li i{
+    font-size: 14px;
+    padding-right: 22px;
+}
+#contact-details .details li p{
+    margin: 0;
+    font-size: 14px;
+}
+#contact-details .map{
+    width: 55%;
+    height: 400px;
+}
+#contact-details .map iframe{
+    width: 100%;
+    height: 100%;
+}
