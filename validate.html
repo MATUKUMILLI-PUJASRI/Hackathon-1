@@ -42,7 +42,9 @@
 
             let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
             let numformat = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
-            console.log(mail, num, htnum);
+console.log(mail.match(mailformat)); 
+console.log(num.match(numformat));  
+console.log(htnum.length > 9);           
             if (mail.match(mailformat) && num.match(numformat) && htnum.length > 9) {
                 document.getElementById("error").innerHTML = `<p style="color:#088178; font-size:20px; text-align:center;">Your room has been booked</p>`;
             } else {
