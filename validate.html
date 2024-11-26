@@ -13,11 +13,13 @@
             padding: 4%;
             box-shadow: 0 20px 20px #a3cfcb;
         }
+
         input {
             border: none;
             outline: none;
             border-bottom: 1px solid black;
         }
+
         button {
             margin-top: 5%;
             font-size: 14px;
@@ -33,16 +35,19 @@
         }
     </style>
     <script>
-        function validate(){
-            let mail=document.getElementById("email").value;
-            let num=document.getElementById("number").value;
-            let htnum=document.getElementById("htnum").value;
-            var mailformat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            var numformat=/^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
-            if(mail.match(mailformat) && num.match(numformat) && htnum.length > 9)
-                document.getElementById("error").innerHTML=`<p style="color:#088178 font-size:20px align:center">You'r room has been booked</p>`;
-            else
-                document.getElementById("error").innerHTML=`<p style="color:red font-size:18px align:center">We can't get you enter valid credentials</p>`;
+        function validate() {
+            let mail = document.getElementById("email").value;
+            let num = document.getElementById("number").value;
+            let htnum = document.getElementById("htnum").value;
+
+            let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            let numformat = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
+
+            if (mail.match(mailformat) && num.match(numformat) && htnum.length > 9) {
+                document.getElementById("error").innerHTML = `<p style="color:#088178; font-size:20px; text-align:center;">Your room has been booked</p>`;
+            } else {
+                document.getElementById("error").innerHTML = `<p style="color:red; font-size:18px; text-align:center;">We can't proceed. Please enter valid credentials</p>`;
+            }
         }
     </script>
 </head>
@@ -51,18 +56,24 @@
     <div id="bg">
         <div id="container">
             <center>
-                <x style="color: #088178; font-size: 28px;">Book Now</x>
+                <span style="color: #088178; font-size: 28px;">Book Now</span>
             </center><br><br>
-            <strong>Name: </strong>
-            <input type="text" placeholder="Name(as per SSC)" style="margin-left:135px;"><br><br>
-            <strong>E-mail: </strong>
-            <input type="text" placeholder="E-mail" style="margin-left:130px;" id="email"><br><br>
-            <strong>Phone number</strong>
-            <input type="text" placeholder="Phone number" style="margin-left:80px;" id="number"><br><br>
-            <strong>EAPCET Hall-Ticket:</strong>
-            <input type="text" placeholder="Hall-Ticket number" style="margin-left:30px;" id="htnum"><br><br>
+
+            <label for="name"><strong>Name: </strong></label>
+            <input type="text" placeholder="Name (as per SSC)" id="name"><br><br>
+
+            <label for="email"><strong>E-mail: </strong></label>
+            <input type="text" placeholder="E-mail" id="email"><br><br>
+
+            <label for="number"><strong>Phone number: </strong></label>
+            <input type="text" placeholder="Phone number" id="number"><br><br>
+
+            <label for="htnum"><strong>EAPCET Hall-Ticket: </strong></label>
+            <input type="text" placeholder="Hall-Ticket number" id="htnum"><br><br>
+
             <center><button id="normal" onclick="validate()">Submit</button></center>
-            <br><span id="error"></span>
+            <br>
+            <span id="error"></span>
         </div>
     </div>
 </body>
